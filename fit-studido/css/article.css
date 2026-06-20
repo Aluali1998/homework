@@ -72,4 +72,9 @@ p {
 
 .video {
   margin-bottom: 40px;
+  max-width: 100%;
+}
+
+.bot {
+  max-width: 100%;
 }
