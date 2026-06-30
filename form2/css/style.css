@@ -117,7 +117,7 @@ textarea {
 input:focus-visible,
 textarea:focus-visible,
 .buttom:focus-visible,
-.check:checked::after {
+.check:focus-visible::after {
   outline: 2px solid #25a8fe;
   outline-offset: 1px;
 }
