@@ -56,7 +56,9 @@
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  transition: opacity 0.2s;
+  transition:
+    opacity 0.2s,
+    background-color 0.2s;
 }
 
 .button:hover {
@@ -136,4 +138,52 @@
 
 .card-link:hover::after {
   transform: translateX(5px);
+}
+
+.faq {
+  position: relative;
+}
+
+.faq::before {
+  position: absolute;
+  z-index: -1;
+  top: 215px;
+  width: calc(40% - 100px);
+  height: 48px;
+  content: "";
+  background: url(../images/large-decor.svg) repeat-x;
+}
+
+.faq-container {
+  display: flex;
+  gap: 28px;
+}
+
+details {
+  margin-bottom: 20px;
+  border-block: 1px solid #d3cbd9;
+}
+
+details > p {
+  padding: 0 0 20px 20px;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  list-style: none;
+}
+
+summary::after {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 22px;
+  background: url(../images/arrow-down.svg) no-repeat center / cover;
 }

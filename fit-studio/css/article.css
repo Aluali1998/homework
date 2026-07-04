@@ -93,6 +93,17 @@
   background-color: #3596ed;
   border: none;
   padding: 0;
+  transition:
+    opacity 0.2s,
+    background-color 0.2s;
+}
+
+.play:hover {
+  opacity: 0.85;
+}
+
+.play:not(:disabled):active {
+  background-color: #48aaff;
 }
 
 .playin {
