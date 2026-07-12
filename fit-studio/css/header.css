@@ -1,6 +1,12 @@
 .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -24,6 +30,7 @@
 }
 
 .right a {
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 

@@ -4,19 +4,33 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  min-width: 375px;
   min-height: 100vh;
 }
 
 *,
 *::after,
 *::before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .container {
@@ -33,10 +47,6 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-section {
-  margin-bottom: 140px;
 }
 
 .title {
@@ -68,6 +78,15 @@ section {
   color: #2c332f;
 }
 
+.decor::before {
+  position: absolute;
+  z-index: -1;
+  width: calc(40% - 100px);
+  height: 48px;
+  content: "";
+  background: url(../images/decor.svg) repeat-x;
+}
+
 a:focus-visible,
 .button:focus-visible,
 summary:focus-visible {
@@ -82,4 +101,10 @@ button.button:not(:disabled):active {
 .button:disabled {
   opacity: 0.6;
   cursor: default;
+}
+
+@media (width <= 992px) {
+  .container {
+    max-width: 768px;
+  }
 }

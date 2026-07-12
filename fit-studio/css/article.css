@@ -5,9 +5,11 @@
 
 .title-article-h1 {
   font-size: 48px;
+  max-width: 596px;
 }
 
 .group {
+  text-align: left;
   max-width: 744px;
 }
 
@@ -36,13 +38,6 @@
 }
 
 .img-decor::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: url(../images/decor.svg);
-  width: 528px;
-  height: 48px;
-
   left: -350px;
   top: 100px;
 }
@@ -52,18 +47,8 @@
 }
 
 .img-decor2::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: url(../images/decor.svg);
-  width: 528px;
-  height: 48px;
   right: -350px;
   bottom: 197px;
-}
-
-.img1 .video {
-  width: 100%;
 }
 
 .article-ul {
@@ -80,9 +65,17 @@
 }
 
 .play {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: absolute;
   top: 50%;
@@ -93,6 +86,9 @@
   background-color: #3596ed;
   border: none;
   padding: 0;
+  -webkit-transition:
+    opacity 0.2s,
+    background-color 0.2s;
   transition:
     opacity 0.2s,
     background-color 0.2s;
@@ -114,4 +110,71 @@
 .video {
   margin-bottom: 40px;
   max-width: 100%;
+}
+
+@media (width<=992px) {
+  .img-decor::before {
+    display: none;
+  }
+
+  .img-decor2::before {
+    display: none;
+  }
+
+  section {
+    margin-bottom: 80px;
+  }
+}
+
+@media (width<=768px) {
+  .article {
+    padding-top: 80px;
+    margin-bottom: 120px;
+  }
+
+  .margin-bot {
+    margin-bottom: 40px;
+  }
+
+  .title-article-h2 {
+    font-size: 32px;
+  }
+
+  .img-decor2 {
+    height: 273px;
+  }
+
+  .video {
+    height: 100%;
+    padding-bottom: 15px;
+  }
+}
+
+@media (width<=576px) {
+  .article {
+    padding-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .title-article-h1 {
+    margin-bottom: 40px;
+  }
+
+  .title-article-h2 {
+    margin-bottom: 30px;
+  }
+
+  .title-article-h2 {
+    font-size: 28px;
+  }
+
+  .play {
+    width: 45px;
+    height: 45px;
+  }
+
+  .playin {
+    width: 16px;
+    height: 16px;
+  }
 }
