@@ -145,7 +145,7 @@ section {
   padding: 0 20px 20px;
 }
 
-.news__link {
+.news__footer-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -160,7 +160,7 @@ section {
   color: #3596ed;
 }
 
-.news__link::after {
+.news__footer-link::after {
   content: "";
   width: 22px;
   height: 9px;
@@ -173,7 +173,7 @@ section {
     -webkit-transform 0.2s;
 }
 
-.news__link:hover::after {
+.news__footer-link:hover::after {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
