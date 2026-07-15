@@ -3,7 +3,7 @@
   margin-bottom: 120px;
 }
 
-.title-article-h1 {
+.article__h1 {
   font-size: 48px;
   max-width: 596px;
 }
@@ -13,16 +13,8 @@
   max-width: 744px;
 }
 
-.title-article-h2 {
+.article__h2 {
   font-size: 36px;
-}
-
-.text-article {
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-  color: #535755;
 }
 
 .text-article:last-child {
@@ -33,38 +25,38 @@
   margin-bottom: 80px;
 }
 
-.img-decor {
+.article__decor {
   position: relative;
 }
 
-.img-decor::before {
+.article__decor::before {
   left: -350px;
   top: 100px;
 }
 
-.img-decor2 {
+.article__decor-bot {
   position: relative;
 }
 
-.img-decor2::before {
+.article__decor-bot::before {
   right: -350px;
   bottom: 197px;
 }
 
-.article-ul {
+.article__ul {
   padding-left: 16px;
 }
 
-.article-li {
+.article__li {
   margin-bottom: 12px;
 }
 
-.article-li::marker {
+.article__li::marker {
   font-size: 22px;
   color: #3596ed;
 }
 
-.play {
+.article__button {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -94,30 +86,30 @@
     background-color 0.2s;
 }
 
-.play:hover {
-  opacity: 0.85;
+.article__button:hover {
+  opacity: 0.9;
 }
 
-.play:not(:disabled):active {
+.article__button:not(:disabled):active {
   background-color: #48aaff;
 }
 
-.playin {
+.article__img-play {
   width: 24px;
   height: 24px;
 }
 
-.video {
+.article__video {
   margin-bottom: 40px;
   max-width: 100%;
 }
 
 @media (width<=992px) {
-  .img-decor::before {
+  .article__dedecor::before {
     display: none;
   }
 
-  .img-decor2::before {
+  .article__decor-bot::before {
     display: none;
   }
 
@@ -136,15 +128,15 @@
     margin-bottom: 40px;
   }
 
-  .title-article-h2 {
+  .article__h2 {
     font-size: 32px;
   }
 
-  .img-decor2 {
+  .article__decor-bot {
     height: 273px;
   }
 
-  .video {
+  .article__video {
     height: 100%;
     padding-bottom: 15px;
   }
@@ -156,24 +148,24 @@
     margin-bottom: 80px;
   }
 
-  .title-article-h1 {
+  .article__h1 {
     margin-bottom: 40px;
   }
 
-  .title-article-h2 {
+  .article__h2 {
     margin-bottom: 30px;
   }
 
-  .title-article-h2 {
+  .article__h2 {
     font-size: 28px;
   }
 
-  .play {
+  .article__button {
     width: 45px;
     height: 45px;
   }
 
-  .playin {
+  .article__img-play {
     width: 16px;
     height: 16px;
   }

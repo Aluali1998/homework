@@ -15,30 +15,30 @@
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
   </head>
   <header class="header">
-    <div class="container">
-      <div class="header-container">
-        <a href="/" class="left">
-          <span class="text-logo"> FIT</span
-          ><img class="logo" src="./images/S.svg" alt="Лого" /><span
-            class="text-logo"
-            >STUDIO</span
-          >
-        </a>
-        <div class="right">
-          <p class="text-right">первое посещение бесплатно</p>
-          <br />
-          <a href="tel:+79282822882" class="tel">+7 (928) 282-28-82</a>
-        </div>
+    <div class="container header__container">
+      <a href="/" class="header__logo">
+        <span class="header__logo-text"> FIT</span
+        ><img class="header__logo-img" src="./images/S.svg" alt="Лого" /><span
+          class="header__logo-text"
+          >STUDIO</span
+        >
+      </a>
+      <div class="header__phone">
+        <p class="header__phone-text text-sub">первое посещение бесплатно</p>
+
+        <a class="header__phone-link" href="tel:+79282822882"
+          >+7 (928) 282-28-82</a
+        >
       </div>
     </div>
   </header>
   <article class="article">
-    <section>
+    <section class="article__section">
       <div class="container">
-        <h1 class="title title-article-h1">
+        <h1 class="article__h1 title">
           Открытие нового филиала в центре города!
         </h1>
-        <p class="text-article">
+        <p class="article__text text">
           Фитнес клуб «Fit.Studio» рад сообщить об открытии нового филиала
           в центре города. Новый клуб расположен в удобном месте, рядом
           с остановками общественного транспорта, что делает его доступным
@@ -46,15 +46,15 @@
           современными тренажёрами, зонами для групповых занятий и отдыха,
           а также сауной и бассейном.
         </p>
-        <p class="text-article margin-bot">
+        <p class="article__text text margin-bot">
           Кроме того, в "FitLife" работают опытные тренеры, которые помогут
           составить индивидуальную программу тренировок и диеты для достижения
           желаемых результатов. Клиенты могут также воспользоваться услугами
           персональных тренировок и консультаций по здоровому образу жизни.
         </p>
-        <div class="img-decor margin-bot decor">
+        <div class="article__decor margin-bot decor">
           <img
-            class="img1"
+            class="article__img"
             src="./images/fit.jpg"
             alt="тренажерный зал"
             width="1220"
@@ -64,67 +64,72 @@
       </div>
     </section>
 
-    <section class="margin-bot">
+    <section class="article__section margin-bot">
       <div class="container">
-        <h2 class="title title-article-h2">Групповые занятия</h2>
-        <p class="text-article group">
+        <h2 class="article__h2 title">Групповые занятия</h2>
+        <p class="article__text text group">
           В новом филиале «Fit.Studio» будут проводиться различные групповые
           занятия. Каждый клиент сможет подобрать подходящий ему вид занятий
           и найти комфортную среду для тренировок.
         </p>
 
-        <ul class="article-ul text-article margin-bot">
-          <li class="article-li">Йога</li>
-          <li class="article-li">Пилатэс</li>
-          <li class="article-li">Аэробика</li>
-          <li class="article-li">Танцы</li>
-          <li class="article-li">Силовые тренировки</li>
+        <ul class="article__ul text margin-bot">
+          <li class="article__li">Йога</li>
+          <li class="article__li">Пилатэс</li>
+          <li class="article__li">Аэробика</li>
+          <li class="article__li">Танцы</li>
+          <li class="article__li">Силовые тренировки</li>
         </ul>
       </div>
     </section>
-    <section>
+    <section class="article__section">
       <div class="container">
-        <h2 class="title title-article-h2">Обзор нового филиала</h2>
-        <div class="img-decor2 decor">
-          <button class="play">
-            <img .class="playin" src="./images/play.svg" alt="Плей" />
+        <h2 class="article__h2 title">Обзор нового филиала</h2>
+        <div class="article__decor-bot decor">
+          <button class="article__button">
+            <img
+              .class="article__img-play"
+              src="./images/play.svg"
+              alt="Плей"
+            />
           </button>
           <video
-            class="video"
+            class="article__video"
             src="./video/gym-video.mp4"
             controls
             poster="./images/fit.jpg"
           ></video>
         </div>
-        <p class="text-article">
+        <p class="article__text text">
           Приглашаем всех желающих посетить новый филиал фитнес клуба "FitLife"
           и начать заботиться о своем здоровье и фитнесе прямо сейчас!
         </p>
       </div>
     </section>
   </article>
-  <footer class="foot">
-    <div class="foot-top">
-      <a href="/" class="left logo-bot">
-        <span class="text-logo"> FIT</span
+  <footer class="footer">
+    <div class="footer__top">
+      <a href="/" class="header__logo header__logo--bot">
+        <span class="header__logo-text"> FIT</span
         ><img class="logo" src="./images/S.svg" alt="Лого" /><span
-          class="text-logo"
+          class="header__logo-text"
           >STUDIO</span
         >
       </a>
+
       <nav>
-        <ul class="ul-bot">
-          <li><a class="ul-text" href="">Клубы</a></li>
-          <li><a class="ul-text" href="">Тренировки</a></li>
-          <li><a class="ul-text" href="">Абонементы</a></li>
-          <li><a class="ul-text" href="">Программа лояльности</a></li>
-          <li><a class="ul-text" href="">Контакты</a></li>
+        <ul class="nav__ul">
+          <li><a class="nav__ul-text" href="">Клубы</a></li>
+          <li><a class="nav__ul-text" href="">Тренировки</a></li>
+          <li><a class="nav__ul-text" href="">Абонементы</a></li>
+          <li><a class="nav__ul-text" href="">Программа лояльности</a></li>
+          <li><a class="nav__ul-text" href="">Контакты</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="foot-bot">
-      <p class="text-bot">&copy; Copyright. Все права защищены</p>
+    <div class="footer__bot">
+      <p class="footer__bot-text">&copy; Copyright. Все права защищены</p>
     </div>
   </footer>
 </html>

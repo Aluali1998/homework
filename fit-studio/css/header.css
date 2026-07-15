@@ -1,4 +1,4 @@
-.header-container {
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,32 +13,37 @@
   border-bottom: 1px solid #d3cbd9;
 }
 
-.left {
+.header__logo {
   display: block;
   width: 84px;
   height: 45px;
+  line-height: 17px;
 }
 
-.text-logo {
+.header__logo-text {
   color: #2c332f;
   font-size: 22px;
 }
 
-.right {
+.header__phone {
   text-align: right;
   display: inline-block;
 }
 
-.right a {
+.header__phone p {
+  margin-bottom: 8px;
+}
+
+.header__phone a {
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
-.right a:hover {
+.header__phone a:hover {
   color: #3596ed;
 }
 
-.tel {
+.header__phone-link {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 18px;
