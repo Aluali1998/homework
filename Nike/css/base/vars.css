@@ -1,0 +1,18 @@
+:root {
+  /* font-family */
+  --font-family: "Montserrat", sans-serif;
+
+  /* colors */
+  --main-color: #fff;
+  --accent-color: #ffea00;
+  --bg-color: #2a2a29;
+  --secondary-color: #c9c69b;
+
+  /* container */
+  --container-width: 1240px;
+  --container-padding: 15px;
+
+  /* transitions */
+
+  --transition-time: 0.2s;
+}
