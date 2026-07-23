@@ -3,8 +3,12 @@
   top: 0;
   right: 0;
   left: 0;
-  padding-top: 40px;
-  padding-bottom: 24px;
+  padding-block: 32px;
+  transition: box-shadow var(--transition-time);
+}
+
+.header--fixed {
+  box-shadow: 0 0 20px var(--shadows-color);
 }
 
 .header__container {
@@ -13,12 +17,47 @@
   justify-content: space-between;
 }
 
-.header__logo {
-  margin-right: 120px;
+@media (width>768px) {
+  .header__menu {
+    flex-grow: 1;
+  }
+
+  .header__logo {
+    margin-right: clamp(25px, -11.585rem + 21.21vw, 120px);
+  }
 }
 
-.header__menu {
-  flex-grow: 1;
+@media (width<=768px) {
+  .header__menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    bottom: 0;
+    z-index: var(--layer-2);
+    min-width: 297px;
+    background-color: var(--bg-color);
+    box-shadow: -2px 0 20px var(--shadows-color);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      right var(--transition-time),
+      opacity var(--transition-time),
+      visibility var(--transition-time);
+  }
+
+  .header__menu--open {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header__menu .menu__list {
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    padding-top: 144px;
+    padding-right: 15px;
+  }
 }
 
 .header__controls {
@@ -27,6 +66,17 @@
   gap: 60px;
 }
 
+@media (width>992px) {
+  .header__controls {
+    gap: 60px;
+  }
+}
+
+@media (width<=992px) {
+  .header__controls {
+    gap: 30px;
+  }
+}
 .header__order {
   padding-bottom: 5px;
   border-bottom: 1px solid var(--accent-color);
@@ -66,7 +116,18 @@
 
 .header__actions {
   display: flex;
-  gap: 20px;
+}
+
+@media (width>768px) {
+  .header__actions {
+    gap: 20px;
+  }
+}
+
+@media (width<=768px) {
+  .header__actions {
+    gap: 30px;
+  }
 }
 
 .header__actions-button {
@@ -76,9 +137,25 @@
   width: 24px;
   height: 24px;
   color: var(--main-color);
+  transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .header__actions-button:hover {
+    color: var(--accent-color);
+  }
+}
+
+.header__actions-button:active {
+  color: var(--accent-color);
 }
 
 .header__actions-icon {
-  /* stroke: var(--main-color); */
   stroke: currentColor;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 2px;
 }

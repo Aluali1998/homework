@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link
       rel="shortcut icon"
-      href="./imgs/nike-favicon-48x48.ico"
+      href="./imgs/nike-favicon-32x32.ico"
       type="image/x-icon"
     />
+    <script defer src="./js/index.js" type="module"></script>
     <title>Nike Air Mag</title>
   </head>
   <body class="page__body">
@@ -22,7 +23,11 @@
             width:50;
             height:20;
         /></a>
-        <nav class="menu header__menu" aria-label="Главное меню">
+        <nav
+          class="menu header__menu"
+          id="header__menu"
+          aria-label="Главное меню"
+        >
           <ul class="menu__list">
             <li class="menu__item">
               <a class="menu__link" href="#air-mag" lang="en">Air Mag</a>
@@ -41,7 +46,11 @@
         <div class="header__controls">
           <a class="header__order" href="#">Сделать заказ</a>
           <div class="header__actions">
-            <button class="header__actions-button">
+            <button
+              class="header__actions-button"
+              title="Поиск"
+              aria-label="Поиск"
+            >
               <svg width="24" height="24">
                 <use
                   class="header__actions-icon"
@@ -49,12 +58,33 @@
                 ></use>
               </svg>
             </button>
-            <button class="header__actions-button">
+            <button
+              class="header__actions-button"
+              title="Корзина"
+              aria-label="Корзина"
+            >
               <svg width="24" height="24">
                 <use
                   class="header__actions-icon"
                   href="./imgs/sprite.svg#cart"
                 ></use>
+              </svg>
+            </button>
+            <button
+              class="header__burger burger"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="header__menu"
+            >
+              <svg width="24" height="24">
+                <use
+                  class="burger__icon-menu"
+                  href="./imgs/sprite.svg#menu-burger"
+                />
+                <use
+                  class="burger__icon-cross"
+                  href="./imgs/sprite.svg#menu-cross"
+                />
               </svg>
             </button>
           </div>

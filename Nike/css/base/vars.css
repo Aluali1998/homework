@@ -7,6 +7,7 @@
   --accent-color: #ffea00;
   --bg-color: #2a2a29;
   --secondary-color: #c9c69b;
+  --shadows-color: #181817;
 
   /* container */
   --container-width: 1240px;
@@ -15,4 +16,9 @@
   /* transitions */
 
   --transition-time: 0.2s;
+
+  /* layers */
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
 }
