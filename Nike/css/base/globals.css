@@ -2,13 +2,50 @@
   font-family: var(--font-family);
   font-size: 400;
   color: var(--main-color);
+  scroll-behavior: smooth;
+  scroll-padding: 98px;
 }
 
 .page__body {
   background-color: var(--bg-color);
+  min-width: 375px;
+}
+
+img {
+  object-fit: cover;
 }
 
 .container {
   width: min(var(--container-width), 100% - var(--container-padding) * 2);
   margin: 0 auto;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 2px;
+}
+.text-light,
+.text-regular {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--main-color);
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.title-md {
+  font-family: var(--font-family);
+  font-weight: 600;
+  /* min-width: 375px ; max-width: 992px; */
+  font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
+  text-transform: uppercase;
+  color: var(--main-color);
 }

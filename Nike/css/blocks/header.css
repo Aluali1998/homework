@@ -155,9 +155,3 @@
 .header__actions-icon {
   stroke: currentColor;
 }
-
-a:focus-visible,
-button:focus-visible {
-  outline: 1px solid var(--accent-color);
-  outline-offset: 2px;
-}
