@@ -1,0 +1,39 @@
+:root {
+  /* font-family */
+  --font-family: "GothamPro", sans-serif;
+  --second-family: "Montserrat", sans-serif;
+  --third-family: "Latin CT Wide", sans-serif;
+  --font3: "Roboto", sans-serif;
+  --font4: "Bahnschrift", sans-serif;
+
+  /* color */
+  --main-color: #fff;
+  --bg-color: #0e0e12;
+  --bg-color-accent: linear-gradient(90.19deg, rgba(255, 255, 255, 0.06) 0.73%);
+  --linear-color-accent: linear-gradient(
+    87.05deg,
+    #dc6b30 17.98%,
+    #e4864f 49.63%,
+    #ffbe82 72.68%,
+    #e49031 93%
+  );
+
+  /* shadows */
+  --shadows-color: #2f312e;
+  --box-shadow-accent:
+    inset 0 -4px 0 0 #8f4119, 0 3px 49px -3px rgba(226, 128, 72, 0.76);
+
+  /* container */
+  --container-width: 1560px;
+  --container-padding: 15px;
+
+  /* transitions */
+  --transition-time: 0.2s;
+
+  /* layers */
+  --layer-negative: -1;
+  --layer-0: 0;
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
+}

@@ -1,0 +1,371 @@
+<!doctype html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="./icons/lc-logo.svg" type="image/svg" />
+    <script src="./js/index.js" type="module"></script>
+    <title>Leader Classic</title>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="container header__container">
+        <button
+          class="header__burger"
+          aria-label="Открыть меню"
+          title="Открыть меню"
+        >
+          <img
+            width="20"
+            height="20"
+            src="./icons/burger-icon.svg"
+            alt="Открыть меню"
+          />
+        </button>
+        <div class="header__burger-main">
+          <ul class="burger__main-list">
+            <li class="">
+              <a class="burger__main-link text-xs" href="#">Тарифы</a>
+            </li>
+            <li class="">
+              <a class="burger__main-link text-xs" href="#">Бонус</a>
+            </li>
+            <li class="">
+              <a class="burger__main-link text-xs" href="#">Реферальная</a>
+            </li>
+            <li class="">
+              <a class="burger__main-link text-xs" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <a class="header__logo logo" href="#">
+          <div class="logo__icon">
+            <div class="logo__icon-top">
+              <img
+                class="logo__icon-crown"
+                width="34"
+                height="17"
+                src="./icons/lc-logo-crown.svg"
+                alt="Логотип"
+              />
+            </div>
+            <div class="logo__icon-bot">
+              <img
+                class="logo__icon-warp"
+                width="52"
+                height="45"
+                src="./icons/lc-logo.svg"
+                alt="Логотип"
+              />
+              <div class="logo__icon-inner">
+                <img
+                  class="logo__icon-add"
+                  width="10.3"
+                  height="31.3"
+                  src="./icons/lc-logo-add.svg"
+                  alt="Логотип"
+                />
+              </div>
+              <p class="logo__title">LEADER CLASSIC</p>
+            </div>
+          </div>
+        </a>
+        <div class="header__lang-wrapper">
+          <button
+            class="header__lang-button"
+            aria-label="Выбрать язык"
+            title="Выбрать язык"
+          >
+            <img
+              width="24"
+              height="24"
+              src="./icons/lang-icon.svg"
+              alt="Русский"
+            />
+            <p class="lang__title text-xs">RU</p>
+            <img
+              class="arrow-down"
+              width="22"
+              height="22"
+              src="./icons/arrow-down.svg"
+              alt="Выбор языка"
+            />
+          </button>
+          <ul class="header__lang-list">
+            <li>
+              <button
+                class="header__lang-item text-xs"
+                aria-label="Русский язык"
+              >
+                RU
+              </button>
+            </li>
+            <li>
+              <button
+                class="header__lang-item text-xs"
+                aria-label="Английский язык"
+              >
+                EN
+              </button>
+            </li>
+          </ul>
+        </div>
+        <main class="header__main">
+          <ul class="header__main-list">
+            <li class="">
+              <a class="header__main-link text-xs" href="#">Тарифы</a>
+            </li>
+            <li class="">
+              <a class="header__main-link text-xs" href="#">Бонус</a>
+            </li>
+            <li class="">
+              <a class="header__main-link text-xs" href="#">Реферальная</a>
+            </li>
+            <li class="">
+              <a class="header__main-link text-xs" href="#">Контакты</a>
+            </li>
+          </ul>
+        </main>
+        <div class="header__account text-xs">
+          <button class="header__account-button-login text-xs">
+            <span>Войти</span>
+          </button>
+          <button class="header__account-button-check text-bold">
+            Открыть счет
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="hero hero__section">
+      <div class="container hero__container">
+        <div class="hero__action">
+          <img
+            class="hero__action-icon"
+            width="50"
+            height="50 "
+            src="./icons/present-icon.png"
+            alt="Подарок"
+          />
+          <div class="hero__action-wrapper">
+            <p class="hero__action-text text-xs">
+              Станьте миллионером с Leader Classic
+              <br />
+              Откройте счет, инвестируйте в фонды Leader Classic и получите шанс
+              выиграть
+              <span class="action__text-nowrap">один из 100 000 ₽ </span>
+            </p>
+
+            <div class="hero__action-timer text-xs">
+              <div class="timer__block">
+                <span class="timer__value" id="days">00</span>
+                <span class="timer__label">Д:</span>
+              </div>
+              <div class="timer__block">
+                <span class="timer__value" id="hours">00</span>
+                <span class="timer__label">Ч:</span>
+              </div>
+              <div class="timer__block">
+                <span class="timer__value" id="minutes">00</span>
+                <span class="timer__label">М:</span>
+              </div>
+              <div class="timer__block">
+                <span class="timer__value" id="seconds">00</span>
+                <span class="timer__label">С:</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__header">
+          <h1 class="hero__title title-h1">
+            ТОП-5 акций с доходностью до 10-30% уже в 2022 году
+          </h1>
+          <ul class="hero__header-list">
+            <li class="hero__header-item text-light">
+              Открытие брокерского счета за 5 минут без визита в офис
+            </li>
+            <li class="hero__header-item text-light">
+              Доступ к ценным бумагам с любого устройства
+            </li>
+            <li class="hero__header-item text-light">Поддержка в чате 24/7</li>
+          </ul>
+          <button class="hero__button-up text-bold">
+            Скачать ТОП-5 акций
+            <img
+              class="hero__button-img"
+              width="100"
+              height="94"
+              src="./images/hero__button-img.svg"
+              alt="Список топовых акций"
+            />
+          </button>
+          <button class="hero__button-open text-s">Открыть счёт</button>
+        </div>
+        <div class="hero__footer">
+          <div class="hero__footer-users">
+            <img
+              class="hero-user-img-3"
+              width="70"
+              height="70"
+              src="./images/hero__footer-img-3.svg"
+              alt="Девушка-пользователь"
+            />
+            <img
+              class="hero-user-img-2"
+              width="70"
+              height="70"
+              src="./images/hero__footer-img-2.svg"
+              alt="парень-пользователь"
+            />
+            <img
+              class="hero-user-img-1"
+              width="70"
+              height="70"
+              src="./images/hero__footer-img-1.svg"
+              alt="парень-пользователь"
+            />
+          </div>
+
+          <p class="hero__footer-text text-xs">
+            Сейчас инвестируют 100 000+ пользователей
+          </p>
+        </div>
+        <picture class="hero__img-wrapper">
+          <source src="./images/hero-img-1.webp" type="image/webp" />
+          <img
+            class="hero__img"
+            width="824"
+            height="1410"
+            src="./images/hero-img-1.png"
+            alt=""
+          />
+        </picture>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="container catalog-container">
+        <h2 class="catalog__title title-h2">Ваши деньги способны на большее</h2>
+        <p class="catalog__text text-main">
+          Сколько бы вы заработали, инвестируй
+          <span class="text-main-accent">100 000р</span> год назад?
+        </p>
+        <ul class="catalog__products">
+          <li class="catalog__product gap">
+            <div class="catalog__img-wrapper">
+              <img
+                width="144"
+                height="144"
+                src="./images/catalog-imgs/catalog-img-bg.svg"
+                alt=""
+              />
+              <img
+                class="catalog__img-tesla"
+                width="125"
+                height="41"
+                src="./images/catalog-imgs/catalog-img-tesla.png"
+                alt=""
+              />
+            </div>
+            <span class="catalog__product-percent">+83.97%</span>
+            <p class="catalog__product-phinance">+72.000₽</p>
+          </li>
+          <li class="catalog__product">
+            <div class="catalog__img-wrapper">
+              <img
+                width="144"
+                height="144"
+                src="./images/catalog-imgs/catalog-img-bg.svg"
+                alt=""
+              />
+              <img
+                class="catalog__img-tesla"
+                width="92"
+                height="70"
+                src="./images/catalog-imgs/catalog-img-amazon.png"
+                alt=""
+              />
+            </div>
+            <span class="catalog__product-percent">+4.11% </span>
+            <p class="catalog__product-phinance">+72.000₽</p>
+          </li>
+          <li class="catalog__product gap">
+            <div class="catalog__img-wrapper">
+              <img
+                width="144"
+                height="144"
+                src="./images/catalog-imgs/catalog-img-bg.svg"
+                alt=""
+              />
+              <img
+                class="catalog__img-tesla"
+                width="61"
+                height="61"
+                src="./images/catalog-imgs/catalog-img-apple.png"
+                alt=""
+              />
+            </div>
+            <span class="catalog__product-percent">+26.36%</span>
+            <p class="catalog__product-phinance">+72.000₽</p>
+          </li>
+          <li class="catalog__product">
+            <div class="catalog__img-wrapper">
+              <img
+                width="144"
+                height="144"
+                src="./images/catalog-imgs/catalog-img-bg.svg"
+                alt=""
+              />
+              <img
+                class="catalog__img-tesla"
+                width="93"
+                height="36"
+                src="./images/catalog-imgs/catalog-img-yandex.png"
+                alt=""
+              />
+            </div>
+            <span class="catalog__product-percent">+17.19%</span>
+            <p class="catalog__product-phinance">+72.000₽</p>
+          </li>
+          <li class="catalog__product gap">
+            <div class="catalog__img-wrapper">
+              <img
+                width="144"
+                height="144"
+                src="./images/catalog-imgs/catalog-img-bg.svg"
+                alt=""
+              />
+              <img
+                class="catalog__img-tesla"
+                width="123"
+                height="67"
+                src="./images/catalog-imgs/catalo-img-fb.png"
+                alt=""
+              />
+            </div>
+            <span class="catalog__product-percent">+31.32%</span>
+            <p class="catalog__product-phinance">+72.000₽</p>
+          </li>
+          <li class="catalog__product">
+            <div class="catalog__img-wrapper">
+              <img
+                width="144"
+                height="144"
+                src="./images/catalog-imgs/catalog-img-bg.svg"
+                alt=""
+              />
+              <img
+                class="catalog__img-tesla"
+                width="122"
+                height="28"
+                src="./images/catalog-imgs/catalog-img-micro.png"
+                alt=""
+              />
+            </div>
+            <span class="catalog__product-percent">+38.99%</span>
+            <p class="catalog__product-phinance">+72.000₽</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

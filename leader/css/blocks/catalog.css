@@ -1,0 +1,67 @@
+.catalog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.catalog__title {
+  text-align: center;
+  z-index: var(--layer-1);
+  max-width: 850px;
+}
+
+.catalog__text {
+  max-width: 650px;
+  margin-bottom: 80px;
+}
+
+.catalog__products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 140px;
+}
+
+.gap {
+  transform: translateY(50px);
+}
+
+@media (width<=1550px) {
+  .catalog__products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width<=768px) {
+  .catalog__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.catalog__img-wrapper {
+  max-width: 144px;
+  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog__img-tesla {
+  position: absolute;
+}
+
+.catalog__product-percent {
+  font-size: 30px;
+  line-height: 130%;
+  color: #4bd879;
+}
+
+.catalog__product-phinance {
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--main-color);
+  background: var(--bg-color-accent);
+  border-radius: 20px;
+}

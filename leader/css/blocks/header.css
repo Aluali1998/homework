@@ -1,0 +1,260 @@
+@media (width>768px) {
+  .header {
+    padding: 30px 0;
+  }
+}
+
+@media (width<=768px) {
+  .header {
+    padding: 15px 0;
+  }
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: var(--layer-1);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  min-width: 65px;
+}
+
+@media (width<=768px) {
+  .logo__icon-crown {
+    width: 22.7px;
+    height: 11.4px;
+  }
+}
+
+.logo__icon {
+  display: block;
+  position: relative;
+}
+
+.logo__icon-top {
+  justify-content: center;
+  position: absolute;
+  bottom: 100%;
+  left: 9px;
+}
+
+.logo__icon-bot {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+}
+
+@media (width<=768px) {
+  .logo__icon-warp {
+    width: 34.6px;
+    height: 30px;
+  }
+
+  .logo__icon-top {
+    left: 6px;
+  }
+}
+
+.logo__icon-inner {
+  position: absolute;
+  transform: translate(14.5px, -4.8px);
+}
+
+@media (width<=768px) {
+  .logo__icon-inner {
+    width: 6.9px;
+    height: 20.9px;
+    transform: translate(9.5px, -4.8px);
+  }
+}
+.logo__title {
+  width: 105px;
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 119%;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+@media (width<=768px) {
+  .logo__title {
+    font-family: var(--font4);
+    font-weight: 600;
+    width: 65px;
+    line-height: 89%;
+  }
+}
+
+.header__lang-wrapper {
+  position: relative;
+  margin-left: 60px;
+}
+
+.header__lang-button {
+  display: flex;
+  gap: 5px;
+}
+
+@media (width>1500px) {
+  .header__lang-wrapper {
+    margin-right: 95px;
+  }
+}
+
+@media (width<=1500px) {
+  .header__lang-wrapper {
+    margin-right: 60px;
+  }
+}
+
+@media (width<=1220px) {
+  .header__lang-wrapper {
+    margin-left: auto;
+    margin-top: 15px;
+  }
+}
+
+.header__lang-list {
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 130%;
+  left: 0;
+  border-radius: 5px;
+  background: var(--bg-color);
+  padding: 8px;
+  min-width: 80px;
+  box-shadow: 2px 0 15px var(--shadows-color);
+  transform: translateY(-10px);
+  transition: var(--transition-time);
+}
+
+.header__lang-list.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header__lang-item {
+  color: var(--main-color);
+  text-align: left;
+  padding: 6px 12px;
+}
+
+.header__main {
+  transition: var(--transition-time);
+}
+
+@media (width>1500px) {
+  .header__main {
+    margin-right: 190px;
+  }
+}
+
+@media (width<=1500px) {
+  .header__main {
+    margin-right: 40px;
+  }
+}
+
+@media (width<=1220px) {
+  .header__main {
+    display: none;
+  }
+}
+
+.header__main-list {
+  display: flex;
+  gap: 80px;
+}
+
+@media (width>1500px) {
+  .header__main-list {
+    gap: 80px;
+  }
+}
+
+@media (width<=1500px) {
+  .header__main-list {
+    gap: 50px;
+  }
+}
+
+.header__main-link {
+  transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .header__main-link:hover {
+    background: radial-gradient(
+      112.45% 3992.22% at 8.04% 17.65%,
+      #e7aa19 0%,
+      #cb6d9c 100%
+    );
+
+    background-clip: text;
+
+    color: transparent;
+  }
+}
+
+.header__account {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+}
+
+.header__account-button-login {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: clamp(4.375rem, 2.811rem + 6.86vw, 7.063rem);
+  height: clamp(2.188rem, 1.278rem + 3.99vw, 3.75rem);
+  background:
+    linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+    linear-gradient(90deg, #b86b00, #ff9800) border-box;
+  transition: var(--transition-time);
+}
+
+.header__account-button-check {
+  border-radius: 20px;
+  width: clamp(6.25rem, 1.375rem + 21.37vw, 14.625rem);
+  height: clamp(2.313rem, 1.257rem + 4.63vw, 4.125rem);
+  font-size: 18px;
+  background: var(--linear-color-accent);
+  box-shadow: var(--box-shadow-accent);
+  transition: color var(--transition-time);
+}
+
+@media (width<=768px) {
+  .header__account-button-login,
+  .header__account-button-check {
+    font-size: 14px;
+  }
+}
+
+@media (width<=576px) {
+  .header__account-button-login,
+  .header__account-button-check {
+    font-size: 12px;
+  }
+}
+
+@media (any-hover: hover) {
+  .header__account-button-check:hover {
+    color: var(--main-color);
+  }
+
+  .header__account-button-login:hover span {
+    background: linear-gradient(90deg, #b86b00, #ff9800);
+    background-clip: text;
+
+    color: transparent;
+  }
+}
