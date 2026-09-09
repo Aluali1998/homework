@@ -1,5 +1,29 @@
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -250px;
+  left: -250px;
+  width: 300px;
+  height: 300px;
+  background: var(--bg-shadow);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: var(--layer-negative);
+  pointer-events: none;
+}
+
 .hero__container {
   margin-bottom: 70px;
+}
+
+@media (width<=992px) {
+  .hero__container {
+    margin-bottom: -150px;
+  }
 }
 
 .hero__action {
@@ -143,13 +167,7 @@
 .hero__button-up {
   position: relative;
 
-  font-size: 22px;
-  background: var(--linear-color-accent);
-  box-shadow: var(--box-shadow-accent);
-  border-radius: 20px;
   margin-right: 20px;
-
-  transition: color var(--transition-time);
 }
 
 .hero__button-img {
@@ -158,37 +176,10 @@
   right: -25px;
 }
 
-.hero__button-open {
-  border: 4px solid #ce6933;
-  border-radius: 20px;
-  transition: color var(--transition-time);
-}
-
-@media (any-hover: hover) {
-  .hero__button-up:hover {
-    color: var(--main-color);
-  }
-
-  .hero__button-open:hover {
-    color: #ce6933;
-  }
-}
-
 @media (width>1220px) {
-  .hero__button-up,
-  .hero__button-open {
-    width: 377px;
-    height: 106px;
-  }
 }
 
 @media (width<=1220px) {
-  .hero__button-up,
-  .hero__button-open {
-    width: 320px;
-    height: 90px;
-  }
-
   .hero__button-img {
     width: 77px;
     top: 5px;
@@ -196,13 +187,6 @@
 }
 
 @media (width<=992px) {
-  .hero__button-up,
-  .hero__button-open {
-    font-size: 18px;
-    width: 280px;
-    height: 70px;
-  }
-
   .hero__button-img {
     width: 70px;
     top: 0;
@@ -210,16 +194,8 @@
 }
 
 @media (width<=768px) {
-  .hero__button-up,
-  .hero__button-open {
-    font-size: 14px;
-    width: 150px;
-    height: 50px;
-  }
-
   .hero__button-open {
     transform: translateY(-8px);
-    border: 2px solid #ce6933;
   }
 
   .hero__button-img {
@@ -230,7 +206,7 @@
 .hero__footer {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   max-width: 600px;
 }
 
@@ -268,10 +244,9 @@
 .hero__img {
   position: absolute;
   right: 0;
-
   max-width: 824px;
   height: auto;
-
+  filter: drop-shadow(0 0 150px var(--bg-shadow));
   z-index: var(--layer-negative);
 }
 
@@ -298,7 +273,7 @@
 @media (width<=992px) {
   .hero__img-wrapper {
     display: flex;
-
+    margin-top: -80px;
     justify-content: flex-end;
   }
 

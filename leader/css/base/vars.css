@@ -6,10 +6,10 @@
   --font3: "Roboto", sans-serif;
   --font4: "Bahnschrift", sans-serif;
 
-  /* color */
+  /* colors */
   --main-color: #fff;
   --bg-color: #0e0e12;
-  --bg-color-accent: linear-gradient(90.19deg, rgba(255, 255, 255, 0.06) 0.73%);
+
   --linear-color-accent: linear-gradient(
     87.05deg,
     #dc6b30 17.98%,
@@ -17,11 +17,18 @@
     #ffbe82 72.68%,
     #e49031 93%
   );
+  --green-color: #61bb75;
+  --bg-text-color: linear-gradient(
+    180deg,
+    rgba(61, 79, 59, 0.37) 0%,
+    rgba(61, 79, 59, 0) 100%
+  );
 
   /* shadows */
   --shadows-color: #2f312e;
   --box-shadow-accent:
     inset 0 -4px 0 0 #8f4119, 0 3px 49px -3px rgba(226, 128, 72, 0.76);
+  --bg-shadow: rgb(142 231 157 / 30%);
 
   /* container */
   --container-width: 1560px;
@@ -31,6 +38,7 @@
   --transition-time: 0.2s;
 
   /* layers */
+  --layer-negative-2: -2;
   --layer-negative: -1;
   --layer-0: 0;
   --layer-1: 1;

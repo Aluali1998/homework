@@ -191,6 +191,14 @@
   transition: color var(--transition-time);
 }
 
+/* .main__stars {
+  color: #ffa500;
+  margin-left: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-time);
+} */
+
 @media (any-hover: hover) {
   .header__main-link:hover {
     background: radial-gradient(
@@ -203,6 +211,11 @@
 
     color: transparent;
   }
+
+  /* .main__stars {
+    opacity: 1;
+    visibility: visible;
+  }*/
 }
 
 .header__account {

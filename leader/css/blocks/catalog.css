@@ -1,9 +1,27 @@
 .catalog-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
-  text-align: center;
+  margin-bottom: 160px;
+}
+
+@media (width>992px) {
+  .catalog-container {
+    margin-bottom: 160px;
+  }
+}
+
+@media (width<=992px) {
+  .catalog-container {
+    margin-bottom: 60px;
+  }
+}
+
+@media (width<=576px) {
+  .catalog-container {
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__title {
@@ -12,15 +30,35 @@
   max-width: 850px;
 }
 
+@media (width<=576px) {
+  .catalog__title {
+    max-width: 300px;
+  }
+}
+
 .catalog__text {
   max-width: 650px;
   margin-bottom: 80px;
+  text-align: center;
+}
+
+@media (width<=768px) {
+  .catalog__text {
+    margin-bottom: 40px;
+  }
+}
+
+@media (width<=576px) {
+  .catalog__text {
+    max-width: 300px;
+  }
 }
 
 .catalog__products {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 140px;
+  margin-bottom: 160px;
 }
 
 .gap {
@@ -36,32 +74,117 @@
 @media (width<=768px) {
   .catalog__products {
     grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-bottom: 40px;
+  }
+
+  .gap {
+    transform: none;
   }
 }
 
+@media (width<=576px) {
+  .catalog__products {
+    /* display: flex;
+    flex-direction: column; */
+    gap: 40px;
+  }
+
+  /* .gap {
+    display: none;
+  } */
+}
+
+.catalog__product {
+  text-align: center;
+}
+
 .catalog__img-wrapper {
-  max-width: 144px;
-  display: block;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.catalog__img-tesla {
+@media (width<=768px) {
+  .catalog__img-bg {
+    max-width: 110px;
+  }
+}
+
+@media (width<=576px) {
+  .catalog__img-bg {
+    max-width: 80px;
+  }
+}
+
+.catalog__img {
   position: absolute;
 }
 
-.catalog__product-percent {
-  font-size: 30px;
-  line-height: 130%;
-  color: #4bd879;
+@media (width<=768px) {
+  .catalog__img {
+    transform: scale(0.8);
+  }
 }
 
-.catalog__product-phinance {
+@media (width<=576px) {
+  .catalog__img {
+    transform: scale(0.7);
+  }
+}
+
+.catalog__product-percent {
+  line-height: 130%;
+  color: #4bd879;
+  text-align: center;
+}
+
+@media (width>992px) {
+  .catalog__product-percent {
+    font-size: 30px;
+  }
+}
+
+@media (width<=992px) {
+  .catalog__product-percent {
+    font-size: 26px;
+  }
+}
+
+@media (width<=768px) {
+  .catalog__product-percent {
+    font-size: 18px;
+  }
+}
+
+@media (width<=576px) {
+  .catalog__product-percent {
+    font-size: 14px;
+  }
+}
+
+.catalog__product-finance {
   font-size: 20px;
   line-height: 130%;
   color: var(--main-color);
   background: var(--bg-color-accent);
   border-radius: 20px;
+}
+
+@media (width<=768px) {
+  .catalog__product-finance {
+    font-size: 16px;
+  }
+}
+
+@media (width<=576px) {
+  .catalog__product-finance {
+    font-size: 12px;
+  }
+}
+
+.catalog__text-bottom {
+  margin-bottom: 30px;
+  text-align: center;
 }
