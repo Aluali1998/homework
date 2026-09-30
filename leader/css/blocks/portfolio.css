@@ -1,6 +1,5 @@
 .portfolio__container {
   margin-bottom: 200px;
-
   gap: clamp(2.5rem, -76.25rem + 87.5vw, 11.25rem);
 }
 
@@ -11,12 +10,24 @@
   }
 }
 
+@media (width<=1220px) {
+  .portfolio__container {
+    margin-bottom: 100px;
+  }
+}
+
 @media (width<=992px) {
   .portfolio__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (width<=576px) {
+  .portfolio__container {
+    margin-bottom: 50px;
   }
 }
 

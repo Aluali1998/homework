@@ -9,7 +9,7 @@
   /* colors */
   --main-color: #fff;
   --bg-color: #0e0e12;
-
+  --bg-accent-color: linear-gradient(90.19deg, rgba(255, 255, 255, 0.06) 0.73%);
   --linear-color-accent: linear-gradient(
     87.05deg,
     #dc6b30 17.98%,

@@ -280,3 +280,17 @@
     font-size: 14px;
   }
 }
+
+.footer__text {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+@media (width<=576px) {
+  .footer__text {
+    font-size: 12px;
+  }
+}

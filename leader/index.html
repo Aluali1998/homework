@@ -140,13 +140,15 @@
     <section class="hero hero__section">
       <div class="container hero__container">
         <div class="hero__action">
-          <img
-            class="hero__action-icon"
-            width="50"
-            height="50 "
-            src="./icons/present-icon.png"
-            alt="Подарок"
-          />
+          <picture>
+            <source src="./icons/present-icon.webp" type="image/webp" />
+            <img
+              class="hero__action-icon"
+              width="50"
+              height="50 "
+              src="./icons/present-icon.png"
+              alt="Подарок"
+          /></picture>
           <div class="hero__action-wrapper">
             <p class="hero__action-text text-xs">
               Станьте миллионером с Leader Classic
@@ -191,13 +193,15 @@
           </ul>
           <button class="accent__button hero__button-up">
             Скачать ТОП-5 акций
-            <img
-              class="hero__button-img"
-              width="100"
-              height="94"
-              src="./images/hero__button-img.svg"
-              alt="Список топовых акций"
-            />
+            <picture>
+              <source src="./images/hero__button-img.webp" type="image/webp" />
+              <img
+                class="hero__button-img"
+                width="100"
+                height="94"
+                src="./images/hero__button-img.svg"
+                alt="Список топовых акций"
+            /></picture>
           </button>
           <button class="hero__button-open main__button text-s">
             Открыть счёт
@@ -848,5 +852,268 @@
         </div>
       </div>
     </section>
+    <section class="mobile">
+      <div class="container mobile__container">
+        <div class="mobile__top">
+          <div class="mobile__info">
+            <h2 class="mobile__title title-h2">Инвестируйте с телефона</h2>
+            <p class="mobile__info-text text-main">
+              Покупайте российские и иностранные акции, облигации, валюту и
+              другие продукты в простом и удобном мобильном приложении для iOS и
+              Android.
+            </p>
+          </div>
+          <picture>
+            <source
+              src="./images/mobile-imgs/mobile-traffic-img.webp"
+              type="image/webp" />
+            <img
+              class="mobile__img-1"
+              width="1052"
+              height="689"
+              src="./images/mobile-imgs/mobile-traffic-img.svg"
+              alt="Два телефона и ноутбук за ними с траффиком акций "
+          /></picture>
+        </div>
+        <div class="mobile__bot">
+          <picture class="mobile__img-wrapper"
+            ><source
+              src="./images/mobile-imgs/mobile-img.webp"
+              type="image/webp" />
+            <img
+              class="mobile__img-2"
+              width="940"
+              height="511"
+              src="./images/mobile-imgs/mobile-img.svg"
+              alt="Два телефона и ноутбук за ними с траффиком акций "
+          /></picture>
+          <div class="mobile__info">
+            <h2 class="mobile__title mobile__title-bot title-h2">
+              Инвестируйте с телефона
+            </h2>
+            <p class="mobile__info-text text-main">
+              Покупайте российские и иностранные акции, облигации, валюту и
+              другие продукты в простом и удобном мобильном приложении для iOS и
+              Android.
+            </p>
+            <div class="mobile__bot-buttons">
+              <button class="mobile__bot-button text-xs">
+                <img
+                  width="14"
+                  height="14"
+                  src="./icons/mobile-icons/apple-icon.png"
+                  alt="иконка apple"
+                />
+                Скачать для IOS
+              </button>
+              <button class="mobile__bot-button text-xs">
+                <img
+                  width="14"
+                  height="14"
+                  src="./icons/mobile-icons/android-icon.png"
+                  alt="иконка apple"
+                />
+                Скачать для Android
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container faq__container">
+        <div class="faq__question">
+          <h2 class="faq__title title-h2">Мне только спросить</h2>
+          <p class="faq__text text-main">
+            Собрали в подсказках ответы на популярные вопросы об инвестициях и
+            сервисе
+          </p>
+          <button class="faq__button accent__button">
+            Получить консультацию
+          </button>
+        </div>
+        <div class="faq__wrapper">
+          <details class="faq__details" name="faq">
+            <summary class="faq__summary">
+              <div class="faq__summary-icon">?</div>
+              <h3 class="faq__summary-title">Есть ли плата за обслуживание?</h3>
+              <div class="faq__summary-arrow"></div>
+            </summary>
+
+            <div class="faq__answer">Есть.</div>
+          </details>
+          <details class="faq__details" name="faq">
+            <summary class="faq__summary">
+              <div class="faq__summary-icon">?</div>
+              <h3 class="faq__summary-title">Как вывести деньги со счёта?</h3>
+              <div class="faq__summary-arrow"></div>
+            </summary>
+
+            <div class="faq__answer">Есть.</div>
+          </details>
+          <details class="faq__details" name="faq">
+            <summary class="faq__summary">
+              <div class="faq__summary-icon">?</div>
+              <h3 class="faq__summary-title">Какие налоги?</h3>
+              <div class="faq__summary-arrow"></div>
+            </summary>
+
+            <div class="faq__answer">Есть.</div>
+          </details>
+          <details class="faq__details" name="faq">
+            <summary class="faq__summary">
+              <div class="faq__summary-icon">?</div>
+              <h3 class="faq__summary-title">Где хранятся деньги?</h3>
+              <div class="faq__summary-arrow"></div>
+            </summary>
+
+            <div class="faq__answer">Есть.</div>
+          </details>
+          <details class="faq__details" name="faq">
+            <summary class="faq__summary">
+              <div class="faq__summary-icon">?</div>
+              <h3 class="faq__summary-title">Как открыть счёт?</h3>
+              <div class="faq__summary-arrow"></div>
+            </summary>
+
+            <div class="faq__answer">Есть.</div>
+          </details>
+          <details class="faq__details" name="faq">
+            <summary class="faq__summary">
+              <div class="faq__summary-icon">?</div>
+              <h3 class="faq__summary-title">Как пополнить счёт?</h3>
+              <div class="faq__summary-arrow"></div>
+            </summary>
+
+            <div class="faq__answer">Есть.</div>
+          </details>
+          <details class="faq__details" name="faq">
+            <summary class="faq__summary">
+              <div class="faq__summary-icon">?</div>
+              <h3 class="faq__summary-title">Что купить?</h3>
+              <div class="faq__summary-arrow"></div>
+            </summary>
+
+            <div class="faq__answer">Есть.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="submit">
+      <div class="container submit__container">
+        <h2 class="title-h2 submit__title">
+          Оставьте заявку на открытие счёта
+        </h2>
+        <div class="submit__instructions">
+          <div class="submit__step">
+            <h3 class="submit__step-title">Заполните заявку онлайн</h3>
+            <p class="submit__step-text text-main">
+              Необходимо: имя, номер телефона, e-mail и пароль для входа.
+            </p>
+          </div>
+          <div class="submit__step">
+            <h3 class="submit__step-title">Откроем счет за 5 минут</h3>
+            <p class="submit__step-text text-main">
+              Вы можете использовать несколько платежных систем для пополнения
+              депозита, включая систему MidexPay и кошелек Bitcoin.
+            </p>
+          </div>
+          <div class="submit__step">
+            <h3 class="submit__step-title">
+              Пополните счёт и начните инвестировать
+            </h3>
+            <p class="submit__step-text text-main">
+              Сразу после пополнения депозита будет доступна торговля через
+              веб-терминал или мобильную платформу.
+            </p>
+          </div>
+        </div>
+        <div class="submit__form">
+          <input
+            class="submit__form-input text-main"
+            type="text"
+            name="name"
+            placeholder="Ваше имя:"
+            required
+          />
+
+          <input
+            class="submit__form-input text-main"
+            type="tel"
+            name="tel"
+            placeholder="+7 --- --- -- --"
+            required
+          />
+
+          <input
+            class="submit__form-input text-main"
+            type="email"
+            name="email"
+            placeholder="Email:"
+            required
+          />
+
+          <button class="submit__form-button accent__button">
+            Оставить заявку
+          </button>
+        </div>
+      </div>
+    </section>
   </body>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <a class="header__logo logo" href="#">
+          <div class="logo__icon">
+            <div class="logo__icon-top">
+              <img
+                class="logo__icon-crown"
+                width="34"
+                height="17"
+                src="./icons/lc-logo-crown.svg"
+                alt="Логотип"
+              />
+            </div>
+            <div class="logo__icon-bot">
+              <img
+                class="logo__icon-warp"
+                width="52"
+                height="45"
+                src="./icons/lc-logo.svg"
+                alt="Логотип"
+              />
+              <div class="logo__icon-inner">
+                <img
+                  class="logo__icon-add"
+                  width="10.3"
+                  height="31.3"
+                  src="./icons/lc-logo-add.svg"
+                  alt="Логотип"
+                />
+              </div>
+              <p class="logo__title">LEADER CLASSIC</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="footer__social"
+          ><img
+            class="footer__socialfooter__social-icon"
+            width="188"
+            height="50"
+            src="./icons/footer-social-icons.svg"
+            alt="Социальные сети"
+        /></a>
+        <a class="footer__data footer__text" href="#"
+          >Политика передачи данных</a
+        >
+      </div>
+      <div class="footer__right">
+        <p class="footer__right-text">Звонок по России бесплатный</p>
+        <a href="#" class="footer__tel">8 (495) 212-16-71</a>
+        <button class="header__account-button-check text-bold">
+          Перезвоните мне
+        </button>
+      </div>
+    </div>
+  </footer>
 </html>

@@ -31,7 +31,7 @@
   display: flex;
 
   border-radius: 20px;
-  background: var(--bg-color-accent);
+  background: var(--bg-accent-color);
 }
 
 @media (width<=1350px) {

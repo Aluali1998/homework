@@ -1,5 +1,5 @@
 // 1. Дата окончания отсчёта
-const endDate = new Date("2026-09-12T00:00:00").getTime();
+const endDate = new Date("2026-10-12T00:00:00").getTime();
 
 // 2. Функция, которая обновляет таймер
 function updateTimer() {
