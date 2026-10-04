@@ -6,7 +6,17 @@ const currentYear = 2026;
 const birthYear = currentYear - age;
 
 console.log(
-  `Меня зовут ${firstName} ${lastName}, мне  ${age} лет. Я ученик курса ${isStudent}.`
+  "Меня зовут " +
+    firstName +
+    " " +
+    lastName +
+    ", мне " +
+    age +
+    " лет." +
+    "Я ученик курса:" +
+    isStudent,
 );
- 
 
+console.log(
+  `Меня зовут ${firstName} ${lastName}, мне  ${age} лет. Я ученик курса ${isStudent}.`,
+);
