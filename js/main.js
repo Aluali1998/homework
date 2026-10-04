@@ -9,4 +9,4 @@ console.log(
   `Меня зовут ${firstName} ${lastName}, мне  ${age} лет. Я ученик курса ${isStudent}.`
 );
  
-);
+
