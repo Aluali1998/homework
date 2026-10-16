@@ -4,14 +4,18 @@ const person = {
   age: 28,
 };
 
-console.log(person);
-
+console.log(person.name);
+console.log(person.age);
 //2
 
 function isEmpty(object) {
-  object === undefined ? console.log(true) : console.log(false);
+  for (let key in object) {
+    return false;
+  }
+  return true;
 }
-isEmpty();
+
+console.log(isEmpty());
 
 //3
 
@@ -29,7 +33,7 @@ const result = cloneAndModify(task, {
   title: "Задача выполнена",
   isCompleted: true,
 });
-for (key in result) {
+for (let key in result) {
   console.log(result[key]);
 }
 //4
