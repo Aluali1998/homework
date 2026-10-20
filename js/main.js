@@ -1,59 +1,50 @@
 //1
-const person = {
-  name: "alex",
-  age: 28,
-};
+const users = [
+  { name: "Alex", age: 24, isAdmin: false },
+  { name: "Bob", age: 13, isAdmin: false },
+  { name: "John", age: 31, isAdmin: true },
+  { name: "Jane", age: 20, isAdmin: false },
+];
 
-console.log(person.name);
-console.log(person.age);
+users.push(
+  { name: "Ann", age: 19, isAdmin: false },
+  { name: "Jack", age: 43, isAdmin: true },
+);
+
+console.log(users);
 //2
-
-function isEmpty(object) {
-  for (let key in object) {
-    return false;
-  }
-  return true;
+function getUserAverageAge(users) {
+  let sum = 0;
+  users.forEach(function (user) {
+    sum += user.age;
+  });
+  return sum / users.length;
 }
-
-console.log(isEmpty());
-
+const midAge = getUserAverageAge(users);
+console.log(midAge);
 //3
-
-const task = {
-  title: "Задача",
-  description: "Описание",
-  isCompleted: false,
-};
-
-function cloneAndModify(object, modification) {
-  const copy = { ...object, ...modification };
-  return copy;
+function getAllAdmins(users) {
+  users.forEach(function (user) {
+    if (user.isAdmin === true) {
+      console.log(user);
+    }
+  });
 }
-const result = cloneAndModify(task, {
-  title: "Задача выполнена",
-  isCompleted: true,
-});
-for (let key in result) {
-  console.log(result[key]);
-}
+
+const admin = getAllAdmins(users);
+console.log(admin);
 //4
-
-const myObject = {
-  method1() {
-    console.log('Метод 1 вызван');
-  },
-  method2() {
-    console.log('Метод 2 вызван');
-  },
-  property: 'Это не метод'
-};
-
-function callAllMethods(obj) {
-  for (const key in obj) {
-    if (typeof obj[key] === 'function') {
-      obj[key]();
+const arr = [1, 2, 3, 4, 5];
+const first = (arr, n) => {
+  {
+    if (n === 0) {
+      return [];
+    } else if (n === undefined) {
+      return arr[0];
+    } else {
+      return arr.slice(0, n);
     }
   }
-}
+};
 
-callAllMethods(myObject);
+console.log(first(arr));
