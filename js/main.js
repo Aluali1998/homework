@@ -63,6 +63,4 @@ const getTodoById = (todos, todoId) => {
   return todo;
 };
 
-const getTodoCount = (todos) => {
-  todos.length;
-};
+const getTodoCount = (todos) => todos.length;
