@@ -1,50 +1,68 @@
-//1
-const users = [
-  { name: "Alex", age: 24, isAdmin: false },
-  { name: "Bob", age: 13, isAdmin: false },
-  { name: "John", age: 31, isAdmin: true },
-  { name: "Jane", age: 20, isAdmin: false },
-];
+"use strict";
 
-users.push(
-  { name: "Ann", age: 19, isAdmin: false },
-  { name: "Jack", age: 43, isAdmin: true },
-);
-
-console.log(users);
-//2
-function getUserAverageAge(users) {
-  let sum = 0;
-  users.forEach(function (user) {
-    sum += user.age;
-  });
-  return sum / users.length;
-}
-const midAge = getUserAverageAge(users);
-console.log(midAge);
-//3
-function getAllAdmins(users) {
-  users.forEach(function (user) {
-    if (user.isAdmin === true) {
-      console.log(user);
-    }
-  });
-}
-
-const admin = getAllAdmins(users);
-console.log(admin);
-//4
-const arr = [1, 2, 3, 4, 5];
-const first = (arr, n) => {
-  {
-    if (n === 0) {
-      return [];
-    } else if (n === undefined) {
-      return arr[0];
-    } else {
-      return arr.slice(0, n);
-    }
-  }
+const todoKeys = {
+  id: "id",
+  text: "text",
+  is_completed: "is_completed",
 };
 
-console.log(first(arr));
+let todos = [];
+
+const getNewTodoId = (todos) =>
+  todos.reduce((maxId, todo) => Math.max(maxId, todo[todoKeys.id]), 0) + 1;
+
+const createTodo = (todos, text) => {
+  const newTodo = {
+    [todoKeys.id]: getNewTodoId(todos),
+    [todoKeys.text]: text,
+    [todoKeys.is_completed]: false,
+  };
+  todos.push(newTodo);
+  return newTodo;
+};
+
+const errTodoNotFound = (todoId) => `Todo with Id ${todoId} not found`;
+
+const completeTodoById = (todos, todoId) => {
+  const todo = todos.find((todo) => todo[todoKeys.id] === todoId);
+  if (todo === undefined) {
+    console.error(errTodoNotFound(todoId));
+    return null;
+  }
+  todo[todoKeys.is_completed] = !todo[todoKeys.is_completed];
+  return todo;
+};
+
+const deleteTodoById = (todos, todoId) => {
+  const todoIndex = todos.findIndex((todo) => todo[todoKeys.id] === todoId);
+  if (todoIndex === -1) {
+    console.error(errTodoNotFound(todoId));
+    return todos;
+  }
+  todos.splice(todoIndex, 1);
+  return todos;
+};
+
+const replaceTodoText = (todos, todoId, text) => {
+  const todo = todos.find((todo) => todo[todoKeys.id] === todoId);
+  if (todo === undefined) {
+    console.error(errTodoNotFound(todoId));
+    return null;
+  }
+  todo[todoKeys.text] = text;
+  return todo;
+};
+
+const getTodoById = (todos, todoId) => {
+  const todo = todos.find((todo) => todo[todoKeys.id] === todoId);
+  if (todo === undefined) {
+    console.error(errTodoNotFound(todoId));
+    return null;
+  }
+
+  return todo;
+};
+
+const getTodoCount = (todos) => {
+  todos.length;
+};
