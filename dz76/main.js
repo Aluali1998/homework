@@ -44,18 +44,17 @@ const deleteTodoById = (todos, todoId) => {
   return todos;
 };
 
-// При помощи метода querySelector получаем элементы .form, .input и .todos
-// Создаем функцию createTodoElement(text), которая будет создавать todo в виде разметки
-// Создаем функцию handleCreateTodo(todos, text), которая будет вызывать createTodo и createTodoElement
+
 
 const form = document.querySelector(".form");
 const input = document.querySelector(".input");
 const todo = document.querySelector(".todos");
 
-const createTodoElement = (text) => {
+const createTodoElement = (todo) => {
   const newTodo = document.createElement("li");
   newTodo.classList.add("todo");
-  newTodo.innerHTML = `<div class="todo-text">${text}</div>
+  newTodo.dataset.id = todo[todoKeys.id];
+  newTodo.innerHTML = `<div class="todo-text">${todo[todoKeys.text]}</div>
           <div class="todo-actions">
             <button class="button-complete button">&#10004;</button>
             <button class="button-delete button">&#10006;</button>
@@ -65,6 +64,32 @@ const createTodoElement = (text) => {
 
 const handleCreateTodo = (todos, text) => {
   const newTodoObject = createTodo(todos, text);
-  const newNameTodo = createTodoElement(newTodoObject.text);
-  todo.append(newNameTodo);
+  const newNameTodo = createTodoElement(newTodoObject);
+  todo.prepend(newNameTodo);
 };
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const text = input.value.trim();
+  if (!text) return;
+  handleCreateTodo(todos, text);
+  input.value = "";
+});
+
+todo.addEventListener("click", ({ target }) => {
+  const todo = event.target.closest(".todo");
+  if (!todo) return;
+
+  const todoId = Number(todo.dataset.id);
+
+  if (target.matches(".button-complete")) {
+    completeTodoById(todos, todoId);
+    todo.classList.toggle("completed");
+  }
+
+  if (target.matches(".button-delete")) {
+    deleteTodoById(todos, todoId);
+    todo.remove();
+  }
+});
