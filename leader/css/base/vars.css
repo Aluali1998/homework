@@ -23,6 +23,7 @@
     rgba(61, 79, 59, 0.37) 0%,
     rgba(61, 79, 59, 0) 100%
   );
+  --overlay: linear-gradient(rgba(30, 30, 30, 0.9), #000 1810%);
 
   /* shadows */
   --shadows-color: #2f312e;

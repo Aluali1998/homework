@@ -24,6 +24,16 @@
           />
         </button>
         <div class="header__burger-main">
+          <button
+            class="burger__close"
+            aria-label="Закрыть"
+            title="Закрыть"
+            data-modal-close
+          >
+            <svg width="24" height="24">
+              <use href="./icons/sprite.svg#menu-cross"></use>
+            </svg>
+          </button>
           <ul class="burger__main-list">
             <li class="">
               <a class="burger__main-link text-xs" href="catalog">Тарифы</a>
@@ -128,20 +138,27 @@
           </ul>
         </main>
         <div class="header__account text-xs">
-          <button class="header__account-button-login text-xs">
+          <button
+            class="header__account-button-login text-xs"
+            data-modal-title="Вход в аккаунт"
+          >
             <span>Войти</span>
           </button>
-          <button class="header__account-button-check text-bold">
+          <button
+            class="header__account-button-check text-bold"
+            data-modal-title="Открыть счёт"
+          >
             Открыть счет
           </button>
         </div>
       </div>
     </header>
+
     <section class="hero hero__section">
       <div class="container hero__container">
         <div class="hero__action">
           <picture>
-            <source src="./icons/present-icon.webp" type="image/webp" />
+            <source srcset="./icons/present-icon.webp" type="image/webp" />
             <img
               class="hero__action-icon"
               width="50"
@@ -191,7 +208,10 @@
             </li>
             <li class="hero__header-item text-light">Поддержка в чате 24/7</li>
           </ul>
-          <button class="accent__button hero__button-up">
+          <button
+            class="accent__button hero__button-up"
+            data-modal-title="Вход в аккаунт"
+          >
             Скачать ТОП-5 акций
             <picture>
               <source src="./images/hero__button-img.webp" type="image/webp" />
@@ -203,7 +223,10 @@
                 alt="Список топовых акций"
             /></picture>
           </button>
-          <button class="hero__button-open main__button text-s">
+          <button
+            class="hero__button-open main__button text-s"
+            data-modal-title="Открыть счёт"
+          >
             Открыть счёт
           </button>
         </div>
@@ -382,7 +405,9 @@
           И еще более 10 000 других ценных бумаг доступно
           <span class="text-main-accent">в каталоге</span>
         </p>
-        <button class="accent__button">Получить каталог</button>
+        <button class="accent__button" data-modal-title="Вход в аккаунт">
+          Получить каталог
+        </button>
       </div>
     </section>
     <section class="tools">
@@ -530,8 +555,16 @@
           случае проигрыша
         </p>
         <div class="bonus__buttons">
-          <button class="bonus__button accent__button">Получить бонус</button>
-          <button class="bonus__button main__button text-xs">
+          <button
+            class="bonus__button accent__button"
+            data-modal-title="Вход в аккаунт"
+          >
+            Получить бонус
+          </button>
+          <button
+            class="bonus__button main__button text-xs"
+            data-modal-title="Открыть счёт"
+          >
             Открыть демо-счёт
           </button>
         </div>
@@ -828,7 +861,10 @@
             Покупайте российские и иностранные акции, облигации, валюту и другие
             продукты в простом и удобном мобильном приложении для iOS и Android
           </p>
-          <button class="portfolio__button accent__button">
+          <button
+            class="portfolio__button accent__button"
+            data-modal-title="Вход в аккаунт"
+          >
             Получить портфель
           </button>
         </div>
@@ -897,7 +933,10 @@
               Android.
             </p>
             <div class="mobile__bot-buttons">
-              <button class="mobile__bot-button text-xs">
+              <button
+                class="mobile__bot-button text-xs"
+                data-modal-title="Вход в аккаунт"
+              >
                 <img
                   width="14"
                   height="14"
@@ -906,7 +945,10 @@
                 />
                 Скачать для IOS
               </button>
-              <button class="mobile__bot-button text-xs">
+              <button
+                class="mobile__bot-button text-xs"
+                data-modal-title="Вход в аккаунт"
+              >
                 <img
                   width="14"
                   height="14"
@@ -928,7 +970,10 @@
             Собрали в подсказках ответы на популярные вопросы об инвестициях и
             сервисе
           </p>
-          <button class="faq__button accent__button">
+          <button
+            class="faq__button accent__button"
+            data-modal-title="Оставить заявку"
+          >
             Получить консультацию
           </button>
         </div>
@@ -1053,7 +1098,10 @@
             required
           />
 
-          <button class="submit__form-button accent__button">
+          <button
+            class="submit__form-button accent__button"
+            data-modal-title="Оставить заявку"
+          >
             Оставить заявку
           </button>
         </div>
@@ -1110,10 +1158,92 @@
       <div class="footer__right">
         <p class="footer__right-text">Звонок по России бесплатный</p>
         <a href="#" class="footer__tel">8 (495) 212-16-71</a>
-        <button class="header__account-button-check text-bold">
+        <button
+          class="header__account-button-check text-bold"
+          data-modal-title="Оставить заявку"
+        >
           Перезвоните мне
         </button>
       </div>
     </div>
   </footer>
+  <div class="modal">
+    <div class="modal__window modal-buy" data-modal-window="buy">
+      <button
+        class="modal__close"
+        aria-label="Закрыть"
+        title="Закрыть"
+        data-modal-close
+      >
+        <svg width="24" height="24">
+          <use href="./icons/sprite.svg#menu-cross"></use>
+        </svg>
+      </button>
+      <div class="modal__content moadla-buy__content">
+        <h3 class="modal-buy__title title-sm" data-modal-title="Открыть счёт">
+          Открыть счет
+        </h3>
+        <form class="modal-buy__form">
+          <label class="modal-buy__label modal-buy__label--name">
+            <input
+              class="modal-buy__input"
+              type="text"
+              placeholder="Ваше имя"
+              name="name"
+              required
+            />
+          </label>
+          <label class="modal-buy__label modal-buy__label--tel">
+            <input
+              class="modal-buy__input"
+              type="tel"
+              placeholder="Номер телефона"
+              name="tel"
+              required
+            />
+          </label>
+          <label class="modal-buy__label modal-buy__label--email">
+            <input
+              class="modal-buy__input"
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              required
+            />
+          </label>
+          <label class="modal-buy__label modal-buy__label--login">
+            <input
+              class="modal-buy__input"
+              type="text"
+              placeholder="Email или телефон"
+              name="login"
+              required
+            />
+          </label>
+          <label class="modal-buy__label modal-buy__label--password">
+            <input
+              class="modal-buy__input"
+              type="password"
+              placeholder="Пароль"
+              name="password"
+              required
+            />
+          </label>
+
+          <button
+            class="modal-buy__submit header__account-button-check text-bold"
+          >
+            Отправить
+          </button>
+          <button
+            class="modal-buy__open header__account-button-check text-bold"
+            data-modal-title="Оставить заявку"
+            type="button"
+          >
+            Открыть счёт
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </html>

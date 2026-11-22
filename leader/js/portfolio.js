@@ -3,7 +3,7 @@ const percentEl = document.getElementById("gauge-percent");
 const riskEl = document.getElementById("gauge-risk");
 const arcFill = document.querySelector(".gauge__arc-fill");
 
-const ARC_LENGTH = arcFill.getTotalLength(); // НОВОЕ: точная длина пути, без ручного подбора
+const ARC_LENGTH = arcFill.getTotalLength();
 
 function updateGauge() {
   const value = Number(slider.value);

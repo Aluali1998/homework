@@ -1,0 +1,106 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--layer-3);
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  background: var(--overlay);
+  -webkit-transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+  transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+}
+
+.modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* .modal::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+} */
+
+.modal__window {
+  position: relative;
+  display: none;
+  margin-block: 50px;
+  vertical-align: middle;
+  background-color: var(--bg-color);
+  -webkit-box-shadow: 0 0 20px var(--shadows-color);
+  box-shadow: 0 0 20px var(--shadows-color);
+  border-radius: 12px;
+}
+
+@media (width>576px) {
+  .modal__window {
+    padding: 50px 50px;
+  }
+}
+
+@media (width<=576px) {
+  .modal__window {
+    padding: 30px 30px;
+  }
+}
+
+.modal-buy__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__window--open {
+  display: inline-block;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.modal-buy__title {
+  margin-bottom: 20px;
+}
+
+.modal-buy__input {
+  border: 4px solid rgba(255, 255, 255, 0.29);
+  border-radius: 20px;
+  width: clamp(15.625rem, 12.643rem + 12.72vw, 18.75rem);
+  height: clamp(3.125rem, 1.932rem + 5.09vw, 4.375rem);
+  padding-left: 45px;
+  color: currentColor;
+  background: var(--bg-accent-color);
+}
+
+.modal-buy__submit {
+  margin-top: 20px;
+}
+
+.modal-buy__label--password,
+.modal-buy__label--login,
+.modal-buy__open {
+  display: none;
+}
+
+.modal-buy__label--password.visible,
+.modal-buy__label--login.visible,
+.modal-buy__open.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
